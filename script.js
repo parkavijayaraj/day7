@@ -27,7 +27,8 @@ request.onload=function(){
     console.log(result1);
     //task e
 
-    var resd=result.filter((ele)=>ele.currencies.name==="United States dollar")
-    var final2=resd.map((ele)=>console.log(ele.currencies));
-    console.log(final2);
+    var resd=result.filter((ele)=>ele.currencies && ele.currencies.USD)
+   
+    
+    resd.forEach((value)=>console.log(value.name.common));
 }
